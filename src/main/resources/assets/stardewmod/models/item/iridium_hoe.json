@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "stardewmod:item/iridiumhoe"
+    "layer0": "stardewmod:item/iridium_hoe"
   }
 }

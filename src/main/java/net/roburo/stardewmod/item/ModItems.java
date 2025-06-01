@@ -19,8 +19,8 @@ public class ModItems {
 
 
     // Hoes
-    public static final RegistryObject<Item> IRIDIUMHOE = ITEMS.register("iridiumhoe",
-            () -> new IridiumHoeItem(new Item.Properties().durability(33)));
+    public static final RegistryObject<Item> IRIDIUMHOE = ITEMS.register("iridium_hoe",
+            () -> new Item(new Item.Properties().durability(33)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
