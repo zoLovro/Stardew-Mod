@@ -27,6 +27,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.roburo.stardewmod.block.ModBlocks;
 import net.roburo.stardewmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -50,6 +51,7 @@ public class StardewMod
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -64,12 +66,25 @@ public class StardewMod
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        // TOOLS
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.IRIDIUMHOE);
+
+            // hoes
+            event.accept(ModItems.HOE);
+            event.accept(ModItems.COPPER_HOE);
+            event.accept(ModItems.STEEL_HOE);
+            event.accept(ModItems.GOLD_HOE);
+            event.accept(ModItems.IRIDIUM_HOE);
         }
 
+        // INGREDIENTS
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.IRIDIUM);
+        }
+
+        // NATURAL BLOCKS AND ORES
+        if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.IRIDIUM_ORE);
         }
     }
 

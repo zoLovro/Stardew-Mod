@@ -1,4 +1,11 @@
 {
+  "item.stardewmod.hoe": "Hoe",
+  "item.stardewmod.copper_hoe": "Copper Hoe",
+  "item.stardewmod.steel_hoe": "Steel Hoe",
+  "item.stardewmod.gold_hoe": "Gold Hoe",
   "item.stardewmod.iridium_hoe": "Iridium Hoe",
+
+  "block.stardewmod.iridium_ore": "Iridium Ore",
+
   "item.stardewmod.iridium": "Iridium"
 }

@@ -17,10 +17,18 @@ public class ModItems {
     public static final RegistryObject<Item> IRIDIUM = ITEMS.register("iridium",
             () -> new Item(new Item.Properties()));
 
-
+// TOOLS
     // Hoes
-    public static final RegistryObject<Item> IRIDIUMHOE = ITEMS.register("iridium_hoe",
-            () -> new Item(new Item.Properties().durability(33)));
+    public static final RegistryObject<Item> HOE = ITEMS.register("hoe",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> COPPER_HOE = ITEMS.register("copper_hoe",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> STEEL_HOE = ITEMS.register("steel_hoe",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GOLD_HOE = ITEMS.register("gold_hoe",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
