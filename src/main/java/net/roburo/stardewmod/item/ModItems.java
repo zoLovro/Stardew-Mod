@@ -14,6 +14,12 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, StardewMod.MOD_ID);
 
     // Materials
+    public static final RegistryObject<Item> GOLD_RAW = ITEMS.register("gold_raw",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GOLD = ITEMS.register("gold",
+            () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> IRIDIUM_RAW = ITEMS.register("iridium_raw",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> IRIDIUM = ITEMS.register("iridium",
             () -> new Item(new Item.Properties()));
 

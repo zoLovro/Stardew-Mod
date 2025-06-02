@@ -79,6 +79,9 @@ public class StardewMod
 
         // INGREDIENTS
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.GOLD_RAW);
+            event.accept(ModItems.GOLD);
+            event.accept(ModItems.IRIDIUM_RAW);
             event.accept(ModItems.IRIDIUM);
         }
 
