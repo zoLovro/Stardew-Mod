@@ -69,7 +69,7 @@ public class StardewMod
         // TOOLS
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 
-            // hoes
+            // Hoes
             event.accept(ModItems.HOE);
             event.accept(ModItems.COPPER_HOE);
             event.accept(ModItems.STEEL_HOE);

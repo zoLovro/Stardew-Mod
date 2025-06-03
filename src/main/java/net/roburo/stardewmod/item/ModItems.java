@@ -1,19 +1,25 @@
 package net.roburo.stardewmod.item;
 
+import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.roburo.stardewmod.StardewMod;
+import net.roburo.stardewmod.item.custom.CopperHoeItem;
+import net.roburo.stardewmod.item.custom.GoldHoeItem;
 import net.roburo.stardewmod.item.custom.IridiumHoeItem;
+import net.roburo.stardewmod.item.custom.SteelHoeItem;
 
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, StardewMod.MOD_ID);
 
-    // Materials
+// MATERIALS
+    //
     public static final RegistryObject<Item> GOLD_RAW = ITEMS.register("gold_raw",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> GOLD = ITEMS.register("gold",
@@ -26,15 +32,15 @@ public class ModItems {
 // TOOLS
     // Hoes
     public static final RegistryObject<Item> HOE = ITEMS.register("hoe",
-            () -> new Item(new Item.Properties()));
+            () -> new HoeItem(Tiers.STONE, new Item.Properties().durability(100)));
     public static final RegistryObject<Item> COPPER_HOE = ITEMS.register("copper_hoe",
-            () -> new Item(new Item.Properties()));
+            CopperHoeItem::new);
     public static final RegistryObject<Item> STEEL_HOE = ITEMS.register("steel_hoe",
-            () -> new Item(new Item.Properties()));
+            SteelHoeItem::new);
     public static final RegistryObject<Item> GOLD_HOE = ITEMS.register("gold_hoe",
-            () -> new Item(new Item.Properties()));
+            GoldHoeItem::new);
     public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe",
-            () -> new IridiumHoeItem());
+            IridiumHoeItem::new);
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

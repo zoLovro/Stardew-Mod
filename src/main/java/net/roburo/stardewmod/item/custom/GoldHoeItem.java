@@ -19,11 +19,11 @@ import net.minecraft.world.phys.BlockHitResult;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public class IridiumHoeItem extends HoeItem {
+public class GoldHoeItem extends HoeItem {
 
-        public IridiumHoeItem() {
-            super(Tiers.DIAMOND, new Item.Properties().durability(250));
-        }
+    public GoldHoeItem() {
+        super(Tiers.GOLD, new Item.Properties().durability(200));
+    }
 
 
 
@@ -42,7 +42,7 @@ public class IridiumHoeItem extends HoeItem {
             return InteractionResult.PASS;
         } else {
             boolean isSneaking = player != null && player.isShiftKeyDown();
-            int radius = isSneaking ? 0 : 2;
+            int radius = isSneaking ? 0 : 1;
 
             boolean tilledAtLeastOne = false;
             Predicate<UseOnContext> predicate = pair.getFirst();

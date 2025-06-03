@@ -4,3 +4,8 @@
 /reload
 /time day
 /time set day
+/reload
+/re
+/reload
+/re
+/reload

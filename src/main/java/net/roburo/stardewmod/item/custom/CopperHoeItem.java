@@ -19,12 +19,11 @@ import net.minecraft.world.phys.BlockHitResult;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-public class IridiumHoeItem extends HoeItem {
+public class CopperHoeItem extends HoeItem {
 
-        public IridiumHoeItem() {
-            super(Tiers.DIAMOND, new Item.Properties().durability(250));
-        }
-
+    public CopperHoeItem() {
+        super(Tiers.GOLD, new Item.Properties().durability(200));
+    }
 
 
     @Override
@@ -42,36 +41,43 @@ public class IridiumHoeItem extends HoeItem {
             return InteractionResult.PASS;
         } else {
             boolean isSneaking = player != null && player.isShiftKeyDown();
-            int radius = isSneaking ? 0 : 2;
 
             boolean tilledAtLeastOne = false;
             Predicate<UseOnContext> predicate = pair.getFirst();
             Consumer<UseOnContext> consumer = pair.getSecond();
 
-            for (int dx = -radius; dx <= radius; dx++) {
-                for (int dz = -radius; dz <= radius; dz++) {
-                    BlockPos pos = center.offset(dx, 0, dz);
+            assert player != null;
+            Direction direction = player.getDirection();
+
+            if (!isSneaking) {
+                for (int i = 0; i < 3; i++) {
+                    BlockPos pos = center.relative(direction, i);
 
                     UseOnContext localContext = new UseOnContext(player, pContext.getHand(),
                             new BlockHitResult(pos.getCenter(), Direction.UP, pos, false));
 
                     if (predicate.test(localContext)) {
                         if (!level.isClientSide) {
-                            consumer.accept(localContext); // << THIS LINE ADDED
+                            consumer.accept(localContext);
                         }
-
                         level.playSound(player, pos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0F, 1.0F);
-
                         tilledAtLeastOne = true;
                     }
                 }
+            } else {
+                BlockPos pos = center.relative(direction, 0);
+                UseOnContext localContext = new UseOnContext(player, pContext.getHand(),
+                        new BlockHitResult(pos.getCenter(), Direction.UP, pos, false));
+                if (predicate.test(localContext)) {
+                    if (!level.isClientSide) {
+                        consumer.accept(localContext);
+                    }
+                    level.playSound(player, pos, SoundEvents.HOE_TILL, SoundSource.BLOCKS, 1.0F, 1.0F);
+                    tilledAtLeastOne = true;
+                }
             }
 
-            if (tilledAtLeastOne) {
-                return InteractionResult.sidedSuccess(level.isClientSide);
-            } else {
-                return InteractionResult.PASS;
-            }
+            return tilledAtLeastOne ? InteractionResult.sidedSuccess(level.isClientSide) : InteractionResult.PASS;
         }
     }
 }
