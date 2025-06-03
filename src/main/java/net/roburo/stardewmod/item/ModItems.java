@@ -34,7 +34,7 @@ public class ModItems {
     public static final RegistryObject<Item> GOLD_HOE = ITEMS.register("gold_hoe",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe",
-            () -> new Item(new Item.Properties()));
+            () -> new IridiumHoeItem());
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

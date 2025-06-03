@@ -1,1 +1,6 @@
 /reload
+/gamemode survival
+/gamemode creative
+/reload
+/time day
+/time set day
