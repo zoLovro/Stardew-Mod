@@ -75,6 +75,18 @@ public class StardewMod
             event.accept(ModItems.STEEL_HOE);
             event.accept(ModItems.GOLD_HOE);
             event.accept(ModItems.IRIDIUM_HOE);
+
+            // Axes
+            event.accept(ModItems.AXE);
+            event.accept(ModItems.COPPER_AXE);
+            event.accept(ModItems.STEEL_AXE);
+            event.accept(ModItems.GOLD_AXE);
+            event.accept(ModItems.IRIDIUM_AXE);
+            
+            // Scythes
+            event.accept(ModItems.SCYTHE);
+            event.accept(ModItems.GOLD_SCYTHE);
+            event.accept(ModItems.IRIDIUM_SCYTHE);
         }
 
         // INGREDIENTS

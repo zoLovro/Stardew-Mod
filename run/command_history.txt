@@ -9,3 +9,8 @@
 /reload
 /re
 /reload
+/re
+/reload
+/time set dayu
+/time set day
+/reload

@@ -5,10 +5,24 @@
   "item.stardewmod.gold_hoe": "Gold Hoe",
   "item.stardewmod.iridium_hoe": "Iridium Hoe",
 
-  "block.stardewmod.iridium_ore": "Iridium Ore",
+  "item.stardewmod.axe": "Axe",
+  "item.stardewmod.copper_axe": "Copper Axe",
+  "item.stardewmod.steel_axe": "Steel Axe",
+  "item.stardewmod.gold_axe": "Gold Axe",
+  "item.stardewmod.iridium_axe": "Iridium Axe",
+
+  "item.stardewmod.scythe": "Scythe",
+  "item.stardewmod.gold_scythe": "Gold Scythe",
+  "item.stardewmod.iridium_scythe": "Iridium Scythe",
+
+
 
   "item.stardewmod.iridium_raw": "Raw Iridium",
   "item.stardewmod.iridium": "Iridium",
   "item.stardewmod.gold_raw": "Raw Gold",
-  "item.stardewmod.gold": "Gold"
+  "item.stardewmod.gold": "Gold",
+
+
+
+  "block.stardewmod.iridium_ore": "Iridium Ore"
 }

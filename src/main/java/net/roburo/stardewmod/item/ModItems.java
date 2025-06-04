@@ -1,5 +1,6 @@
 package net.roburo.stardewmod.item;
 
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
@@ -8,10 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.roburo.stardewmod.StardewMod;
-import net.roburo.stardewmod.item.custom.CopperHoeItem;
-import net.roburo.stardewmod.item.custom.GoldHoeItem;
-import net.roburo.stardewmod.item.custom.IridiumHoeItem;
-import net.roburo.stardewmod.item.custom.SteelHoeItem;
+import net.roburo.stardewmod.item.custom.*;
 
 
 public class ModItems {
@@ -41,6 +39,28 @@ public class ModItems {
             GoldHoeItem::new);
     public static final RegistryObject<Item> IRIDIUM_HOE = ITEMS.register("iridium_hoe",
             IridiumHoeItem::new);
+
+    // Axes
+    public static final RegistryObject<Item> AXE = ITEMS.register("axe",
+            () -> new AxeItem(Tiers.STONE, new Item.Properties().durability(100)));
+    public static final RegistryObject<Item> COPPER_AXE = ITEMS.register("copper_axe",
+            () -> new AxeItem(Tiers.STONE, new Item.Properties().durability(150)));
+    public static final RegistryObject<Item> STEEL_AXE = ITEMS.register("steel_axe",
+            () -> new AxeItem(Tiers.IRON, new Item.Properties().durability(200)));
+    public static final RegistryObject<Item> GOLD_AXE = ITEMS.register("gold_axe",
+            () -> new AxeItem(Tiers.GOLD, new Item.Properties().durability(250)));
+    public static final RegistryObject<Item> IRIDIUM_AXE = ITEMS.register("iridium_axe",
+            () -> new AxeItem(Tiers.DIAMOND, new Item.Properties().durability(300)));
+
+    // Scythes
+    public static final RegistryObject<Item> SCYTHE = ITEMS.register("scythe",
+            () -> new ScytheItem(new Item.Properties(), Tiers.STONE));
+    public static final RegistryObject<Item> GOLD_SCYTHE = ITEMS.register("gold_scythe",
+            () -> new ScytheItem(new Item.Properties(), Tiers.GOLD));
+    public static final RegistryObject<Item> IRIDIUM_SCYTHE = ITEMS.register("iridium_scythe",
+            () -> new ScytheItem(new Item.Properties(), Tiers.DIAMOND));
+
+    //
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
