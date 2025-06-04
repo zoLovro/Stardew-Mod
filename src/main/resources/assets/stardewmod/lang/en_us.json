@@ -15,7 +15,11 @@
   "item.stardewmod.gold_scythe": "Gold Scythe",
   "item.stardewmod.iridium_scythe": "Iridium Scythe",
 
-
+  "item.stardewmod.pickaxe": "Pickaxe",
+  "item.stardewmod.copper_pickaxe": "Copper Pickaxe",
+  "item.stardewmod.steel_pickaxe": "Steel Pickaxe",
+  "item.stardewmod.gold_pickaxe": "Gold Pickaxe",
+  "item.stardewmod.iridium_pickaxe": "Iridium Pickaxe",
 
   "item.stardewmod.iridium_raw": "Raw Iridium",
   "item.stardewmod.iridium": "Iridium",

@@ -82,11 +82,21 @@ public class StardewMod
             event.accept(ModItems.STEEL_AXE);
             event.accept(ModItems.GOLD_AXE);
             event.accept(ModItems.IRIDIUM_AXE);
-            
+
             // Scythes
             event.accept(ModItems.SCYTHE);
             event.accept(ModItems.GOLD_SCYTHE);
             event.accept(ModItems.IRIDIUM_SCYTHE);
+
+            // Pickaxes
+            event.accept(ModItems.PICKAXE);
+            event.accept(ModItems.COPPER_PICKAXE);
+            event.accept(ModItems.STEEL_PICKAXE);
+            event.accept(ModItems.GOLD_PICKAXE);
+            event.accept(ModItems.IRIDIUM_PICKAXE);
+
+            // Watering cans
+
         }
 
         // INGREDIENTS

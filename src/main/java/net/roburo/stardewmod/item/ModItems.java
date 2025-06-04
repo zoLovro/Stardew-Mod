@@ -1,9 +1,6 @@
 package net.roburo.stardewmod.item;
 
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.HoeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -60,7 +57,19 @@ public class ModItems {
     public static final RegistryObject<Item> IRIDIUM_SCYTHE = ITEMS.register("iridium_scythe",
             () -> new ScytheItem(new Item.Properties(), Tiers.DIAMOND));
 
-    //
+    // Pickaxes
+    public static final RegistryObject<Item> PICKAXE = ITEMS.register("pickaxe",
+            () -> new PickaxeItem(Tiers.STONE, new Item.Properties().durability(100)));
+    public static final RegistryObject<Item> COPPER_PICKAXE = ITEMS.register("copper_pickaxe",
+            () -> new PickaxeItem(Tiers.STONE, new Item.Properties().durability(150)));
+    public static final RegistryObject<Item> STEEL_PICKAXE = ITEMS.register("steel_pickaxe",
+            () -> new PickaxeItem(Tiers.IRON, new Item.Properties().durability(200)));
+    public static final RegistryObject<Item> GOLD_PICKAXE = ITEMS.register("gold_pickaxe",
+            () -> new PickaxeItem(Tiers.GOLD, new Item.Properties().durability(250)));
+    public static final RegistryObject<Item> IRIDIUM_PICKAXE = ITEMS.register("iridium_pickaxe",
+            () -> new PickaxeItem(Tiers.DIAMOND, new Item.Properties().durability(300)));
+
+    // Watering cans
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
